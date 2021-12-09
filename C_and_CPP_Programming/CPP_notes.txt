@@ -1,0 +1,4 @@
+-> Static typing means syntax is checked at compiled time rather than at run time.
+-> Comments in CPP are given using a.) /* This is a multiline comment */
+                                   b.) // This is a single line comment
+-> //Data Types Tomorrow I will be studying data types in c++
