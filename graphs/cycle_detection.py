@@ -15,9 +15,6 @@ def dfs_check_undirected(node, adj, parent):
             return True
 
     return False
-
-def bfs_directed_graph(node, adj, parent):
-    visited[node] = 1
     
 
 def dfs_check_directed(node, adj):
