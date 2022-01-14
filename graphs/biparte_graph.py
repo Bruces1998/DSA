@@ -1,3 +1,7 @@
+'''
+Problem link:
+https://www.interviewbit.com/old/problems/two-teams/
+'''
 class Graph():
 
     def __init__(self, V):

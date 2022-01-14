@@ -35,7 +35,7 @@ def solve(A):
             
             if i == len(A) - 1 or j == len(A[0]) - 1:
                 red_lake.appeend((A[i][j], (i, j)))
-
+                
     visited_blue = [[0]*len(A[0]) for _ in range(len(A))]
     visited_red = [[0]*len(A[0]) for _ in range(len(A))]
     bfs(red_lake, A, visited_red)
