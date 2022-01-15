@@ -1,5 +1,6 @@
 '''
-Problem link:
+Link to the problem based
+on the following concept:
 https://www.interviewbit.com/old/problems/two-teams/
 '''
 class Graph():
