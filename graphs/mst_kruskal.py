@@ -5,7 +5,6 @@ is using union find and sorting.
 '''
 from union_find_implementation import UnionFind
 
-
 class Graph:
     def __init__(self, vertices):
         self.V = vertices

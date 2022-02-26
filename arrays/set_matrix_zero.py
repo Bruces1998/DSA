@@ -21,7 +21,7 @@ def zetZeroes(arr):
             for j in range(cols):
                 arr[i][j] = 0
 
-    
+    for j in range(col):
         if col_vec[j] == 1:
             for i in range(row):
                 arr[i][j] = 0
