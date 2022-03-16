@@ -19,3 +19,5 @@ def countPlatforms(n, arr, dep):
         ans = max(ans, count)
 
     return ans
+
+print(count)

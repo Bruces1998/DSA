@@ -10,7 +10,7 @@ def maxLen(arr, n):
             ans = i + 1
 
         else:
-            if mapp.get(sum) is not None:
+            if mapp.get(summ) is not None:
                 ans = max(ans, i - mapp[summ])
 
             else:

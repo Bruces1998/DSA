@@ -56,6 +56,7 @@ class Graph():
         self.colourArr = [-1 for i in range(self.V)]
         for i in range(self.V):
             if self.colourArr[i] == -1:
+                self.colourArr[i] = 1
                 if not self.isBipartiteUtilBFS(i):
                     return False
         return True

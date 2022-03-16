@@ -10,7 +10,7 @@ def reverseLL(node):
     return prev
 
 
-def isPalindrome(head: Optional[ListNode]) -> bool:
+def isPalindrome(                                                                   head: Optional[ListNode]) -> bool:
     
     if head == None or head.next == None:
         return True

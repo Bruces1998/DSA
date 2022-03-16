@@ -11,7 +11,7 @@ def missing_repeated_number(arr):
         S -= arr[i]
         P -= arr[i]**2
 
-    miss = (S+P/S)/2
+    miss = (S+P/S)//2
     rep = miss - S 
 
     return (rep, miss)

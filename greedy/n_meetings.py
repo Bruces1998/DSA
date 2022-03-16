@@ -1,3 +1,7 @@
+'''
+Activity selection is very similar.
+'''
+
 def maxMeetings(n, start, end):
 
     coll = [[start[i], end[i]] for i in range(n)]
