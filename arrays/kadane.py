@@ -8,3 +8,5 @@ def maxSumSub(arr):
         max_sum = max(max_sum, curr_sum)
 
     return max_sum
+
+print(maxSumSub([-2,1,-3,4,-1,2,1,-5,4] ))

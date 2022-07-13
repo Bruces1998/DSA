@@ -1,5 +1,5 @@
 def merge(arr, left, mid, right, inv_count):
-    # inv_count = 0
+    inv_count = 0
     temp = [0]*10
     i = left
     j = mid
@@ -14,7 +14,7 @@ def merge(arr, left, mid, right, inv_count):
         else:
             k+=1
             temp[k] = arr[j]
-            inv_count.append((i, j))
+            inv_count += mid - i
             j+=1
 
     if i == mid:
@@ -30,16 +30,17 @@ def merge(arr, left, mid, right, inv_count):
     for w in range(k+1):
         arr[left+w] = temp[w]
 
+    return inv_count
 
-def mergeSort(arr, left, right, ans):
+
+def mergeSort(arr, left, right):
+    ans = 0
     mid = (left+right)//2
     if left < right:
-        mergeSort(arr, left, mid, ans)
-        mergeSort(arr, mid+1, right, ans)
+        ans += mergeSort(arr, left, mid)
+        ans += mergeSort(arr, mid+1, right)
 
-        merge(arr, left, mid+1, right, ans)
+        ans += merge(arr, left, mid+1, right, ans)
+    return ans
 
-
-ans = []
-print(mergeSort([5, 3, 2, 1, 4], 0, 4,ans ))
-print(ans)
+print(mergeSort([5, 3, 2, 1, 4], 0, 4))
