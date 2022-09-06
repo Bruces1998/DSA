@@ -10,3 +10,5 @@ def minCoinsGreedy(coins, V):
 
 
     return ans
+
+print(minCoinsGreedy([1, 2, 3], 4))

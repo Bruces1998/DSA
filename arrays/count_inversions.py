@@ -15,6 +15,7 @@ def merge(arr, left, mid, right, inv_count):
             k+=1
             temp[k] = arr[j]
             inv_count += mid - i
+            print(inv_count)
             j+=1
 
     if i == mid:

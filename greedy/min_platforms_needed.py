@@ -4,18 +4,18 @@ def countPlatforms(n, arr, dep):
 
     ans = 1
     count = 1
-    i = 1
-    j = 0
+    arr_index = 1
+    dep_index = 0
 
-    while i < n and j < n:
+    while arr_i < n and dep_j < n:
         print(count)
-        if arr[i] <= dep[j]:
+        if arr[arr_i] <= dep[dep_j]:
             count += 1
-            i += 1
+            arr_i += 1
 
         else:
             count -= 1
-            j += 1
+            dep_j += 1
         
         ans = max(ans, count)
 
