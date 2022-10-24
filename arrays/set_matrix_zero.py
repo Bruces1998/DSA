@@ -3,28 +3,36 @@ problem link-
 https://leetcode.com/problems/set-matrix-zeroes/
 '''
 
-def zetZeroes(arr):
-    row = len(arr)
-    col = len(arr[0])
+def setMatrixZeroes(arr):
 
-    row_vec = [0]*row
-    col_vec = [0]*col
+    rowLength = len(arr)
+    colLength = len(arr[0])
 
-    for i in range(row):
-        for j in range(col):
+    rowVector = [0]*rowLength
+    colVector = [0]*colLength
+
+    #Setting up the row and column vectors
+    for i in range(rowLength):
+        for j in range(colLength):
             if arr[i][j] == 0:
-                row_vec[i] = 1
-                col_vec[j] = 1
+                rowVector[i] = 1
+                colVector[j] = 1
 
-    for i in range(row):
-        if row_vec[i] == 1:
-            for j in range(cols):
+    #setting up all the rows based on rowVector
+    for i in range(rowLength):
+        if rowVector[i] == 1:
+            for j in range(colLength):
                 arr[i][j] = 0
 
-    for j in range(col):
-        if col_vec[j] == 1:
-            for i in range(row):
+    #setting up all the rows based on colVector
+    for j in range(colLength):
+        if colVector[j] == 1:
+            for i in range(rowLength):
                 arr[i][j] = 0
 
 
     return arr
+
+
+arr = [[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]
+print(setMatrixZeroes(arr))

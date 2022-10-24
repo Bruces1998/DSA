@@ -12,8 +12,8 @@ def getCoins(S, m, n):
 
     return table[n]
 
-arr = [1, 2, 3]
+arr = [4, 5, 3]
 m = len(arr)
-n = 4
+n = 21
 
 print(getCoins(arr, m, n))

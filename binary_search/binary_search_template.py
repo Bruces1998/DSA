@@ -27,3 +27,4 @@ def binary_search(array):
 
     return left
 
+z
