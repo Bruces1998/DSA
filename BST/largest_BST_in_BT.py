@@ -13,13 +13,15 @@ Validate BST
 def validateBST(root):
 
 
+    summ = 0
     def isValidNode(node, low, high):
         if node == None:
             return True
 
         if not (low < node.val < high):
-            return True 
-
+            return False
+        
+        summ += node.val
         return isValidNode(node.left, low, node.val) and isValidNode(node.right, node.val, high)
 
 

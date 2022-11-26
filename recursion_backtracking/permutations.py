@@ -14,7 +14,7 @@ def permutations(arr):
     ans = []
     ds = []
     backtrack(arr, ans, ds)
-    return []
+    return ans
 
 # inp = list(map(int, input("Array:").split(" ")))
-print(permutations(input().split("   ")))
+print(permutations(input().split(" ")))
