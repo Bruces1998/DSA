@@ -10,6 +10,7 @@ def sortColors(arr):
         if arr[mid] == 0:
             swap(arr[mid], arr[start])
             start += 1
+            mid += 1
 
         elif arr[mid] == 1:
             mid += 1

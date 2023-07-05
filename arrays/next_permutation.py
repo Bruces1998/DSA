@@ -20,3 +20,4 @@ def nextPermut(num):
     num[i+1:] = sorted(num[i+1:])
     return num
 
+print(nextPermut("73984"))
