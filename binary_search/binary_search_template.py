@@ -2,6 +2,8 @@
 This is the most basic and generalized template
 to solve the problems involving binary search 
 algorithm.
+https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems
+
 '''
 #some condition that needs to be checked each time
 def some_condition(some_variables):

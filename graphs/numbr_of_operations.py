@@ -1,3 +1,31 @@
+'''
+https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/
+'''
+
+class Solution:
+    def makeConnected(self, n: int, connections: List[List[int]]) -> int:
+
+        UF = UnionFind(n)
+        unused_edges = 0
+
+        for (x, y) in connections:
+            rootX = UF.find(x)
+            rootY = UF.find(y)
+
+            if rootX != rootY:
+                UF.union(x, y)
+            
+            else:
+                unused_edges += 1
+
+        if UF.getCount() - 1 > unused_edges:
+            return -1
+
+        return UF.getCount() - 1
+
+        
+
+
 class UnionFind:
     '''
     Python implementation of Union-Find 
@@ -7,7 +35,6 @@ class UnionFind:
     def __init__(self, size):
         self.root = [i for i in range(size)]
         self.rank = [1 for i in range(size)]
-        self.size = [1 for i in range(size)]
         self.count = size
 
 
@@ -18,7 +45,7 @@ class UnionFind:
         self.root[X] = self.find(self.root[X])
         return self.root[X]
 
-    def union_by_rank(self, X, Y):
+    def union(self, X, Y):
         rootX = self.find(X)
         rootY = self.find(Y)
 
@@ -34,30 +61,7 @@ class UnionFind:
                 self.rank[rootX] += 1
 
             self.count -= 1
-    
-    def union_by_size(self, X, Y):
-        root_X = self.find(X)
-        root_Y = self.find(Y)
-
-        if root_X != root_Y:
-            if self.size[root_X] < self.size[root_Y]:
-                self.root[root_X] = root_Y
-                self.size[root_Y] += self.size[root_X]
-            
-            else:
-                self.root[root_Y] = root_X
-                self.size[root_X] += self.size[root_Y]
-            
-            self.count -= 1
-    
-    def get_count(self):
-        return self.count
-
 
 
     def getCount(self):
         return self.count
-
-
-    
-    

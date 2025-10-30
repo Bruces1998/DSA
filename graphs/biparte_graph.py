@@ -1,4 +1,9 @@
 '''
+If we are able to colour a graph with two 
+colours such that no adjacent nodes have the 
+same colour, it is called a bipartite graph.
+
+
 Link to the problem based
 on the following concept:
 https://www.interviewbit.com/old/problems/two-teams/

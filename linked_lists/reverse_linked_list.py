@@ -20,7 +20,7 @@ recursively.
 
 def reverse(node, prev = None):
     if not node:
-        return prev'
+        return prev
     
     next = node.next
     node.next = prev

@@ -1,3 +1,14 @@
+"""
+About Heap:
+Two types:
+1. Min Heap: smallest element at the top
+2. Max Heap: largest element at the top
+
+Major operations:
+1. Insert: Insert an element in the heap in O(logN) time
+2. Delete: Delete the root in the heap in O(1) time
+3. Heapify: Convert an array into heap
+"""
 def adjust(a, i, n):
     
     largest = i
@@ -18,7 +29,7 @@ def adjust(a, i, n):
 
 def heapify(arr, n):
 
-    for i in range(n//2 , -1, -1):
+    for i in range((n//2), -1, -1):
         adjust(arr, i, n)
     print(arr)
     for i in range(n-1, -1, -1):

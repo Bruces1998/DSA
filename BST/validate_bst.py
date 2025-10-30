@@ -18,7 +18,7 @@ def validateBST(root):
             return True
 
         if not (low < node.val < high):
-            return True 
+            return False
 
         return isValidNode(node.left, low, node.val) and isValidNode(node.right, node.val, high)
 
